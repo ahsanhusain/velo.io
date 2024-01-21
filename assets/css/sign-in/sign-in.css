@@ -1,0 +1,7 @@
+body{
+	background: url('../../img/site/car-bg.png') no-repeat;
+	background-position: bottom;
+	background-size: contain;
+	height: 100vh;
+	width:100%;
+}

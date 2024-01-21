@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../../libs/Inter/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+}
+
+* {
+	margin: 0;
+    padding: 0;
+	font-family: 'Inter', cursive;
+}
+body{
+	background-color: #F5FCFF!important;
+}
