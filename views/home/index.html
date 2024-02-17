@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Velo - Dashboard</title>
+
+    <!-- Font Awesome -->
+    <link href="../../libs/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../../libs/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../../libs/fontawesome/css/solid.css" rel="stylesheet" />
+    <!-- support v4 icon references/syntax -->
+    <link href="../../libs/fontawesome/css/v4-font-face.css" rel="stylesheet" />
+    <link href="../../libs/datatable/datatable.css" rel="stylesheet" />
+    <link href="../../libs/popup-menu/popr/popr.css" rel="stylesheet" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/home/home.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="align-items-center align-items-lg-center justify-content-between d-lg-flex flex-row-lg justify-content-lg-between navbar w-100">
+        <div class="ml-4">
+          <img src="../../assets/img/site/meapheap-logo.png" alt="Velo Logo" />
+        </div>
+        <nav class="align-items-center justify-content-end d-flex mr-4">
+          <a href="javascript://" class="pr-3 text-muted text-decoration-none">
+            <i class="fa fa-bell fa-2x"></i>
+          </a>
+          <a href="javascript://" data-id="demo" class="demo pr-3 text-muted text-decoration-none" style="border-right: 1px solid">
+            <i class="fa fa-cog fa-2x"></i>
+          </a>
+          <div class="popr-box" data-box-id="demo">
+            <a href="./account/profile.html"><div class="popr-item"><i class="fa fa-user"></i> My Account</div></a>
+            <a href="./account/wallet.html"><div class="popr-item"><i class="fa fa-wallet"></i> Add Payment</div></a>
+            <a href="#"><div class="popr-item"><i class="fa fa-star"></i> My Ratings</div></a>
+            <a href="#"><div class="popr-item"><i class="fa fa-chart-pie"></i> Sentiment Analysis</div></a>
+            <a href="#"><div class="popr-item"><i class="fa fa-circle-radiation"></i> Velo Communities</div></a>
+            <a href="#"><div class="popr-item"><i class="fa fa-gavel"></i> Terms & Conditions</div></a>
+            <a href="#"><div class="popr-item"><i class="fa fa-question-circle"></i> Faqs</div></a>
+            <a href="#"><div class="popr-item"><i class="fa fa-moon"></i> Dark Mode</div></a>
+            <a href="#"><div class="popr-item"><i class="fa fa-sign-out"></i> Logout</div></a>
+          </div>
+          <span class="pl-3">Hello, Atif</span><img src="../../assets/img/home/profile/profile.png" width="40" />
+        </nav>
+      </nav>
+    </header>
+    <section>
+      <div class="content">
+          <div class="box-counts">
+            <!-- 4 Count Boxes -->
+            <div class="d-lg-flex">
+              <div class="counts w-100">
+                <div>
+                  <div class="align-items-lg-center d-flex d-lg-flex d-sm-flex justify-content-lg-between justify-content-sm-between">
+                    <div class="icon">
+                      <img class="w-50" src="../../assets/img/home/trip.png" alt="Velo Images">
+                    </div>
+                    <div class="options">
+                      <img class="w-100" src="../../assets/img/home/trip_back.png" alt="Velo Images">
+                    </div>
+                  </div>
+                  <div>
+                    <h2>Schedule Trips</h2>
+                    <span>Short Discription</span>
+                  </div>
+                </div>
+              </div>
+              <div class="counts w-100">
+                <div>
+                  <div class="align-items-lg-center d-flex d-lg-flex d-sm-flex justify-content-lg-between justify-content-sm-between">
+                    <div class="icon">
+                      <img class="w-50" src="../../assets/img/home/ride.png" alt="Velo Images">
+                    </div>
+                    <div class="options">
+                      <img class="w-100" src="../../assets/img/home/ride_back.png" alt="Velo Images">
+                    </div>
+                  </div>
+                  <div>
+                    <h2>Ride Requests</h2>
+                    <span>Short Discription</span>
+                  </div>
+                </div>
+              </div>
+              <div class="counts w-100">
+                <div>
+                  <div class="align-items-lg-center d-flex d-lg-flex d-sm-flex justify-content-lg-between justify-content-sm-between">
+                    <div class="icon">
+                      <img class="w-50" src="../../assets/img/home/whereto.png" alt="Velo Images">
+                    </div>
+                    <div class="options text-right">
+                      <img class="w-50" src="../../assets/img/home/where_back.png" alt="Velo Images">
+                    </div>
+                  </div>
+                  <div>
+                    <h2>Where to</h2>
+                    <span>Short Discription</span>
+                  </div>
+                </div>
+              </div>
+              <div class="counts w-100">
+                <div>
+                  <div class="align-items-lg-center d-flex d-lg-flex d-sm-flex justify-content-lg-between justify-content-sm-between">
+                    <div class="icon">
+                      <img class="w-50" src="../../assets/img/home/daily.png" alt="Velo Images">
+                    </div>
+                    <div class="options">
+                      <img class="w-100" src="../../assets/img/home/daily_back.png" alt="Velo Images">
+                    </div>
+                  </div>
+                  <div>
+                    <h2>Daily Commute</h2>
+                    <span>Short Discription</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="data-table">
+            <div class="filterTags"></div>
+            <table id="example" class="hover nowrap" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Distance</th>
+                        <th>Seats</th>
+                        <th>Date</th>
+                        <th>Charges</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots">
+                              <i class="fa fa-ellipsis-v text-muted"></i>
+                            </div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>4140 Parker Rd. Allentown, New Mexico 31134</td>
+                        <td>2464 Royal Ln. Mesa, New Jersey 45463</td>
+                        <td>42 Kilometers</td>
+                        <td>01</td>
+                        <td>21-Jan-2024 02:04 AM</td>
+                        <td>$200</td>
+                        <td>
+                          <div class="action-menu">
+                            <div class="three-dots"><i class="fa fa-ellipsis-v text-muted"></i></div>
+                            <div class="menu-action">
+                              <ul>
+                                <li>
+                                  <button class="upload-table"><i class="fa fa-cloud-arrow-down"></i> Upload Table</button>
+                                </li>
+                                <li>
+                                  <button class="view-table"><i class="fa fa-eye"></i> View Table</button>
+                                </li>
+                                <li>
+                                  <button class="table-structure"><i class="fa fa-table"></i> Table Structure</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+            <div class="custom-pagination">
+              <button id="custom-previous"><i class="fa fa-arrow-left"></i>&nbsp;Previous</button>
+              <div id="customBottom" class="custom-bottom"></div>
+              <button id="custom-next">Next&nbsp;<i class="fa fa-arrow-right"></i></button>
+            </div>
+          </div>
+      </div>
+
+      <!-- side bar -->
+      <div id="sidebar" class="bg-light h-100" style="overflow: auto;">
+        <form id="filterTags">
+          <div class="align-items-center curser-pointer d-flex justify-content-between p-3 text-right">
+            <span><h1>Filters</h1></span>
+            <span class="p-3 close fa fa-times"></span>
+          </div>
+          <div class="sidebar_content pl-4 pr-5">
+            <div class="_input">
+              <div class="mb-4">
+                <input type="text" name="when" class="form-control" id="f_when" placeholder="When">
+              </div>
+              <div>
+                <input type="text" name="when" class="form-control" id="f_latest_by" placeholder="Latest By">
+              </div>
+            </div>
+            <div class="mt-5 text-muted">
+              <div class="where_to p-2 fliter_box mb-3">
+                <div>
+                  <span class="fa fa-location-dot"></span>
+                  <span>Where to?</span>
+                  <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                  <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100">
+                    <span class="fa fa-location-dot fa-2x"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="where_to p-2 fliter_box">
+                <div>
+                  <span class="fa fa-location-dot"></span>
+                  <span>Where to?</span>
+                  <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                  <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100">
+                    <span class="fa fa-location-dot fa-2x"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="filter_action p-4">
+            <button type="submit" class="btn btn-primary curser-pointer w-100">Apply Filters</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="fixed-bottom">
+      <div class="w-100 text-center">
+        <span>Copyright © 2023 MapleHeap Technologies Inc. All rights reserved.</span>
+      </div>
+    </footer>
+    <script src="../../libs/jQuery/jquery.js"></script>
+    <script src="../../libs/datatable/datatable.js"></script>
+    <script src="../../libs/popup-menu/popr/popr.js"></script>
+    <script src="../../libs/off-canvas-sidebar-panel/simpler/lib/jquery.simpler-sidebar.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/home/home.js"></script>
+  </body>
+</html>

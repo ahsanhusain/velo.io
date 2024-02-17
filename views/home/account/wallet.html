@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Velo - Profile</title>
+
+    <!-- Font Awesome -->
+    <link href="../../../libs/fontawesome/css/fontawesome.css" rel="stylesheet" />
+    <link href="../../../libs/fontawesome/css/brands.css" rel="stylesheet" />
+    <link href="../../../libs/fontawesome/css/solid.css" rel="stylesheet" />
+    <!-- support v4 icon references/syntax -->
+    <link href="../../../libs/fontawesome/css/v4-font-face.css" rel="stylesheet" />
+    <link href="../../../libs/popup-menu/popr/popr.css" rel="stylesheet" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/home/account/wallet.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="align-items-center align-items-lg-center mt-2 justify-content-between d-lg-flex flex-row-lg justify-content-lg-between navbar w-100">
+        <div class="ml-4">
+          <img src="../../../assets/img/site/meapheap-logo.png" alt="Velo Logo" />
+        </div>
+        <nav class="align-items-center justify-content-end d-flex mr-4">
+          <a href="javascript://" class="pr-3 text-muted text-decoration-none">
+            <i class="fa fa-bell fa-2x"></i>
+          </a>
+          <a href="javascript://" data-id="demo" class="demo pr-3 text-muted text-decoration-none" style="border-right: 1px solid">
+            <i class="fa fa-cog fa-2x"></i>
+          </a>
+          <div class="popr-box" data-box-id="demo">
+            <a class="text-decoration-none" href="./profile.html"><div class="popr-item"><i class="fa fa-user"></i> My Account</div></a>
+            <a class="text-decoration-none" href="./wallet.html"><div class="popr-item"><i class="fa fa-wallet"></i> Add Payment</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-star"></i> My Ratings</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-chart-pie"></i> Sentiment Analysis</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-circle-radiation"></i> Velo Communities</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-gavel"></i> Terms & Conditions</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-question-circle"></i> Faqs</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-moon"></i> Dark Mode</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-sign-out"></i> Logout</div></a>
+          </div>
+          <span class="pl-3">Hello, Atif</span><img src="../../../assets/img/home/profile/profile.png" width="40" />
+        </nav>
+      </nav>
+    </header>
+
+    <section>
+      <div class="content text-muted">
+          <div class="breadcrumbs">
+            <span onclick="window.open('../index.html', '_self')" class="cursor-pointer">Home </span><span>/ Wallet</span>
+          </div>
+          <div class="form-content">
+            <div class="mb-2">
+              <div>
+                <h1>Wallet</h1>
+                <span>Cards and accounts</span>
+              </div>
+            </div>
+            <div class="upload-file mb-5">
+              <div id="drop-area" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)" onclick="handleClick()">
+                <img src="../../../assets/img/home/wallet/drag.png">
+                <p>Click to upload or drag and drop</p>
+                <input type="file" id="file-input" onchange="handleFileSelect()">
+              </div>
+            </div>
+            <div class="payment-card">
+              <div class="d-flex d-xs-block card-1 p-1 mb-2">
+                <div class="w-25 d-xs-block">
+                  <div class="card-img w-100">
+                    <img src="../../../assets/img/home/wallet/master.png" class="w-100">
+                  </div>
+                </div>
+                <div class="card-detail ml-3">
+                  <h1 class="p-4">Mastercard</h1>
+                  <p class="p-4 pt-0">Credit card ending in **** 1256</p>
+                  <div class="action pl-4">
+                    <a href="javascript:void(0)" onclick="openModal()" class="text-theme text-decoration-none">Edit</a>
+                    <a href="javascript:void(0)" class="text-theme text-decoration-none ml-4">Remove</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="d-flex d-xs-block card-2 p-1">
+                <div class="w-25 d-xs-block">
+                  <div class="card-img w-100">
+                    <img src="../../../assets/img/home/wallet/visa.png" class="w-100">
+                  </div>
+                </div>
+                <div class="card-detail ml-3">
+                  <h1 class="p-4">Visacard</h1>
+                  <p class="p-4 pt-0">Credit card ending in **** 1256</p>
+                  <div class="action pl-4">
+                    <a href="javascript:void(0)" onclick="openModal()" class="text-theme text-decoration-none">Edit</a>
+                    <a href="javascript:void(0)" class="text-theme text-decoration-none ml-4">Remove</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer>
+              <span>2020 © Influence - Designed by Ahsan Hussain</span>
+          </footer>
+      </div>
+    </section>
+    <!-- Modals -->
+    <!-- Cards Modals -->
+    <div class="custom-modal-container" id="card-modal">
+      <div class="custom-modal-content w-50 d-xs-block">
+        <span class="text-theme custom-close-btn" onclick="closeModal()">&times;</span>
+        <div class="d-align-center d-flex d-justify-between modal-head w-100 mb-3">
+          <span class="h-4 text-theme">Add a credit or debit card</span>
+          <span class="text-theme cursor-pointer h-4 p-1" onclick="closeModal()">&times;</span>
+        </div>
+        <form action="#" method="post">
+          <div class="card-modal-details">
+            <div class="d-flex w-100 mb-3">
+              <div class="card-number w-50 m-2">
+                <input type="text" name="name" placeholder="Card Name" class="pt-3 pb-3 w-100">
+              </div>
+              <div class="card-number w-50 m-2">
+                <input type="text" name="number" placeholder="Card Number" class="pt-3 pb-3 w-100">
+              </div>
+            </div>
+
+            <div class="d-flex w-100 mb-3">
+              <div class="card-number w-50 m-2">
+                <input type="date" name="date" placeholder="Expiration date" class="pt-3 pb-3 w-100">
+              </div>
+              <div class="card-number w-50 m-2">
+                <input type="text" name="number" placeholder="CVC" class="pt-3 pb-3 w-100">
+              </div>
+            </div>
+          </div>
+          <div class="card-footers">
+            <p>Lorem ipsum is a dummy text</p>
+            <img src="../../../assets/img/home/wallet/cards.svg">
+            <div class="buttons">
+              <button type="button" class="p-2 cursor-pointer" onclick="closeModal()">Cancel &times</button>
+              <button type="button" class="p-2 bg-primary text-white cursor-pointer">Add to cart +</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../../libs/jQuery/jquery.js"></script>
+    <script src="../../../libs/popup-menu/popr/popr.js"></script>
+    <script type="text/javascript" src="../../../assets/js/home/account/wallet.js"></script>
+  </body>
+</html>
