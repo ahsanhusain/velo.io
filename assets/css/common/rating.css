@@ -1,0 +1,23 @@
+.breadcrumbs{
+    padding: 0px 21px;
+}
+
+.content > .breadcrumbs span:first-child {
+    color: #2196F3;
+}
+
+.breadcrumbs span + span{
+    color:#6E6E91;
+}
+
+.form-content{
+    height: 100%;
+    background: #FFFFFF;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.user-cards{
+    border-radius: 10px;
+}
