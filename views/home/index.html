@@ -37,9 +37,10 @@
             <a href="./account/wallet.html"><div class="popr-item"><i class="fa fa-wallet"></i> Add Payment</div></a>
             <a href="../common/rating.html"><div class="popr-item"><i class="fa fa-star"></i> My Ratings</div></a>
             <a href="../common/reviews.html"><div class="popr-item"><i class="fa fa-chart-pie"></i> Sentiment Analysis</div></a>
-            <a href="#"><div class="popr-item"><i class="fa fa-circle-radiation"></i> Velo Communities</div></a>
+            <a href="javascript://"><div class="popr-item"><i class="fa fa-circle-radiation"></i> Velo Communities</div></a>
             <a href="../../common/terms-condition.html"><div class="popr-item"><i class="fa fa-gavel"></i> Terms & Conditions</div></a>
             <a href="#"><div class="popr-item"><i class="fa fa-question-circle"></i> Faqs</div></a>
+            <a href="javascript://" onclick="openModal()"><div class="popr-item"><i class="fa fa-share-alt"></i> Invite People</div></a>
             <a href="#"><div class="popr-item"><i class="fa fa-moon"></i> Dark Mode</div></a>
             <a href="#"><div class="popr-item"><i class="fa fa-sign-out"></i> Logout</div></a>
           </div>
@@ -596,6 +597,31 @@
           </div>
         </form>
       </div>
+
+      <!-- Invite People -->
+          <div class="custom-modal-container" id="card-modal">
+            <div class="custom-modal-content w-75 w-xs-75 d-xs-block">
+              <div class="justify-content-between d-flex d-justify-between modal-head w-100 mb-3">
+                <span class="h1 m-0">Invite Friends</span>
+                <span class="text-dark curser-pointer h4 p-1" onclick="closeModal()">&times;</span>
+              </div><hr>
+              <div class="align-items-center d-lg-flex justify-content-around">
+                <div>
+                  <img src="../../assets/img/site/invite.png" class="w-100" alt="Invite ">
+                </div>
+                <div>
+                  <div class="custom-search">
+                    <input type="text" class="custom-search-input" placeholder="Enter your email">
+                    <button class="copy custom-search-botton curser-pointer bg-primary" type="submit">Copy</button> 
+                  </div>
+                  <div class="mt-3 text-center">
+                    <h3 class="text-center text-muted">Or Share Via</h3>
+                    <img src="../../assets/img/site/social.png" class="mt-3" alt="Socail Icon">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
     </section>
 
     <footer class="text-center">

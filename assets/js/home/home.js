@@ -115,6 +115,9 @@ $(document).ready(function() {
         },
       },
     });
+
+    var randomCode = generateRandomCode(18); // Generate 8-character random code
+    $('.custom-search-input').val(randomCode);
 });
 
 $( "#filterTags" ).submit(async function( event ) {
@@ -133,4 +136,59 @@ $( "#filterTags" ).submit(async function( event ) {
 $('.demo').popr({
   'speed': 200,
   'mode': 'bottom'
+});
+
+// modals
+// Quick Demo JS
+function openModal() {
+  document.getElementById('card-modal').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('card-modal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Close the modal if the overlay is clicked
+window.onclick = function (event) {
+    if (event.target === document.getElementById('card-modal')) {
+        closeModal();
+    }
+     if ($('.popr_container_bottom').length > 0) {
+        $('.data-table').css('z-index', '-1'); 
+    } else {
+        console.log("Element does not exist.");
+        $('.data-table').css('z-index', '');
+    }
+
+};
+
+function generateRandomCode(length) {
+    var chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var code = '';
+    for (var i = 0; i < length; i++) {
+        var randomIndex = Math.floor(Math.random() * chars.length);
+        code += chars[randomIndex];
+    }
+    return code;
+}
+
+$('.copy').click(function(){
+    var codeToCopy = $('.custom-search-input').val();
+    navigator.clipboard.writeText(codeToCopy)
+        .then(function() {
+            // alert('Code copied to clipboard!');
+        })
+        .catch(function(err) {
+            console.error('Failed to copy: ', err);
+        });
+});
+
+$('a.demo').click(function(event) {
+    if ($('.popr_container_bottom').length > 0) {
+        $('.data-table').css('z-index', '-1'); 
+    } else {
+        $('.data-table').css('z-index', ''); 
+    }
 });
