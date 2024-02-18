@@ -15,7 +15,7 @@
 
     <!-- Custom Style -->
     <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/common/rating.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/commute/add-daily-commute.css">
 
   </head>
   <body>
@@ -36,7 +36,7 @@
             <a class="text-decoration-none" href="../home/account/wallet.html"><div class="popr-item"><i class="fa fa-wallet"></i> Add Payment</div></a>
             <a class="text-decoration-none" href="./rating.html"><div class="popr-item"><i class="fa fa-star"></i> My Ratings</div></a>
             <a class="text-decoration-none" href="./reviews.html"><div class="popr-item"><i class="fa fa-chart-pie"></i> Sentiment Analysis</div></a>
-            <a class="text-decoration-none" href="../commute/index.html"><div class="popr-item"><i class="fa fa-circle-radiation"></i> Velo Communities</div></a>
+            <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-circle-radiation"></i> Velo Communities</div></a>
             <a class="text-decoration-none" href="./terms-condition.html"><div class="popr-item"><i class="fa fa-gavel"></i> Terms & Conditions</div></a>
             <a class="text-decoration-none" href="./faqs.html"><div class="popr-item"><i class="fa fa-question-circle"></i> Faqs</div></a>
             <a class="text-decoration-none" href="#"><div class="popr-item"><i class="fa fa-moon"></i> Dark Mode</div></a>
@@ -49,43 +49,71 @@
     <section>
       <div class="content mt-3 text-muted">
           <div class="breadcrumbs curser-pointer">
-            <span onclick="window.open('../home/index.html', '_self')" class="cursor-pointer">Home </span><span>/ Search</span>
+            <span onclick="window.open('../home/index.html', '_self')" class="cursor-pointer ml-5 text-primary">Home </span><span>/ Daily Commute Entry</span>
           </div>
       </div>
 
-      <div class="form-content text-muted">
+      <div class="bg-white form-content m-2 p-5 rounded text-muted">
         <div class="d-lg-flex justify-content-between mb-2">
           <div>
-            <h1>Where to go</h1>
+            <h1 class="isEdit">Daily Commute Entry</h1>
             <span>Upgrade your photo and personal details here</span>
           </div>
-          <div class="d-flex">
-            <button class="curser-pointer btn btn-outline-dark text-dark mr-1">Cancel <i class="fa fa-times"></i></button>
-            <button class="curser-pointer btn bg-primary text-white">Search <i class="fa fa-search"></i></button>
+          <div class="">
+            <a href="./index.html" class="text-decoration-none curser-pointer btn btn-outline-dark text-dark mr-1">Cancel <i class="fa fa-times"></i></a>
+            <button class="curser-pointer btn btn-primary text-white">Save <i class="fa fa-save"></i></button>
           </div>
         </div><hr>
         <div class="search-content pt-4">
           <div class="action-perform">
-            <button class="curser-pointer btn bg-primary text-white">I am not drive this Trips</button>
-            <button class="curser-pointer btn bg-primary text-white">I am not drive this Trips</button>
+            <div class="days mb-2">
+              <button class="curser-pointer btn btn-outline-dark text-dark">Mon</button>
+              <button class="curser-pointer btn btn-outline-dark text-dark">Tue</button>
+              <button class="curser-pointer btn btn-outline-dark text-dark">Wed</button>
+              <button class="curser-pointer btn btn-outline-dark text-dark">Thu</button>
+              <button class="curser-pointer btn btn-outline-dark text-dark">Fri</button>
+              <button class="curser-pointer btn btn-outline-dark text-dark">Sat</button>
+              <button class="curser-pointer btn btn-outline-dark text-dark">Sun</button>
+            </div>
+            <div>
+              <button disabled="disabled" class="curser-pointer btn btn-primary text-white mb-xs-1">I am looking for Ride</button>
+              <button class="curser-pointer btn btn-primary text-white">I am driving on this trip</button>
+            </div>
           </div>
           <div class="d-lg-flex flex-column input-filed w-50 mt-4">
+            <div class="d-lg-flex mb-2 for_new" style="display: none!important;">
+              <input type="text" name="Seats" class="form-control mb-2 mr-2" placeholder="Seats">
+              <input type="text" name="changes" class="form-control mb-2" placeholder="Charges per seat">
+            </div>
             <div class="d-lg-flex mb-2">
-              <input type="date" name="data" class="form-control mb-2 mr-2">
-              <input type="text" name="data" class="form-control mb-2" placeholder="Address One">
+              <input type="text" name="data" class="form-control mb-2 mr-2" placeholder="Start Time">
+              <input type="text" name="data" class="form-control mb-2" placeholder="End Time">
             </div>
             <div class="d-lg-flex">
-              <input type="text" name="data" class="form-control" placeholder="Address Two">
+              <input type="month" name="data" placeholder="Month" class="form-control mb-2 mr-2">
             </div>
-          </div><br><hr>
+          </div>
           <div class="mt-4">
-            <h1>My Survey Entries</h1>
-            <div class="text-center mt-5">
-              <img src="../../assets/img/site/no-image.png" alt="no-image">
-              <div class="d-flex justify-content-center text-center">
-                <p class="w-50">
-                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur ma
-                </p>
+            <div class="mt-5 text-muted w-50 w-xs-100 d-lg-flex">
+              <div class="where_to p-2 mr-1 p-xs-2 fliter_box">
+                <div>
+                  <span class="fa fa-location-dot"></span>
+                  <span>Origin</span>
+                  <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                  <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100" style="height: 100px">
+                    <span class="fa fa-location-dot fa-2x"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="where_to p-2 p-xs-2 fliter_box">
+                <div>
+                  <span class="fa fa-location-dot"></span>
+                  <span>Origin</span>
+                  <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                  <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100" style="height: 100px">
+                    <span class="fa fa-location-dot fa-2x"></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -97,6 +125,6 @@
     </footer>
     <script src="../../libs/jQuery/jquery.js"></script>
     <script src="../../libs/popup-menu/popr/popr.js"></script>
-    <script type="text/javascript" src="../../assets/js/common/rating.js"></script>
+    <script type="text/javascript" src="../../assets/js/commute/add-daily-commute.js"></script>
   </body>
 </html>
