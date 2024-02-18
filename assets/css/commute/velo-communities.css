@@ -1,0 +1,23 @@
+.menu-action {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: 1;
+  right: 80px;
+}
+.menu-action ul li{
+    list-style: none;
+}
+.menu-action ul{
+    padding: 0;
+    margin: 0;
+}
+.menu-action ul button{
+    padding: 4px;
+    width: 100%;
+    border-radius: 7px;
+    margin-bottom: 1px;
+    color: white;
+    cursor: pointer;
+}
