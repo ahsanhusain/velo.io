@@ -38,35 +38,20 @@ function handleFile(file) {
     dropArea.innerHTML = '';
 
     if (file.type.startsWith('image/')) {
-      const img = document.createElement('img');
-      img.src = URL.createObjectURL(file);
-      img.classList = 'w-25'
-      dropArea.appendChild(img);
+        const img = document.createElement('img');
+        img.src = URL.createObjectURL(file);
+        img.onload = function() {
+            URL.revokeObjectURL(this.src); // Free up memory after load
+        };
+        img.classList = 'w-25'
+        dropArea.appendChild(img);
     } else {
-      const p = document.createElement('p');
-      p.textContent = `File: ${file.name}, Type: ${file.type}`;
-      dropArea.appendChild(p);
+        const p = document.createElement('p');
+        p.textContent = `File: ${file.name}, Type: ${file.type}`;
+        dropArea.appendChild(p);
     }
 }
 
-// modals
-// Quick Demo JS
-function openModal() {
-  document.getElementById('card-modal').style.display = 'flex';
-  document.body.style.overflow = 'hidden';
-}
-
-function closeModal() {
-  document.getElementById('card-modal').style.display = 'none';
-  document.body.style.overflow = 'auto';
-}
-
-// Close the modal if the overlay is clicked
-window.onclick = function (event) {
-  if (event.target === document.getElementById('card-modal')) {
-    closeModal();
-  }
-};
 
 $('.demo').popr({
   'speed': 200,

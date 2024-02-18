@@ -1,0 +1,17 @@
+#drop-area {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer!important;
+  background-color: #F4F4F4;
+  z-index: 1;
+}
+
+#drop-area.highlight {
+  border-color: #2196F3;
+}
+
+#file-input {
+  display: none;
+}
