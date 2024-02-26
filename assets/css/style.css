@@ -569,3 +569,6 @@ body{
 
 .text-decoration-none { text-decoration: none!important; }
 .curser-pointer { cursor: pointer; }
+
+.opacity-1{ opacity: 1!important;}
+.opacity-0{ opacity: 0.5!important;}

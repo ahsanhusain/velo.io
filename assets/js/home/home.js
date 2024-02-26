@@ -1,5 +1,11 @@
-$(document).ready(function() {
-    var table = $('#example').DataTable({
+var table;
+
+function _table(dt = 'ride') {
+    window.localStorage.setItem('htable', dt);
+
+    $('table').hide();
+    $('#'+dt).show();
+    table = $('#'+dt).DataTable({
         "pagingType": "full_numbers",
         "pageLength": 10,
         "language": {
@@ -24,13 +30,13 @@ $(document).ready(function() {
             }
         ]
     });
+
     var $searchInput = $('div.dataTables_filter input');
     var $dt = $('div.dataTables_filter');
     $searchInput.attr("placeholder", "Search");
-    var $addTitleButton = $('<button id="right-sidebar" class="tableBtn filter"><i class="fa fa-filter"></i></button>');
-    var $rideTitleButton = $('<button id="ride-button" class="tableBtn ride">Rides</i></button>');
-    var $tripTitleButton = $('<button id="trip-button" class="tableBtn trip">Trips</button>');
-
+    var $addTitleButton = $('<button id="right-sidebar" class="btn btn-primary ml-1 filter"><i class="fa fa-filter"></i></button>');
+    var $rideTitleButton = $('<button id="ride-button" onclick="loadtable(`ride`)" data-id="ride" class="opacity-0 btn btn-primary mr-2 ride">Rides</i></button>');
+    var $tripTitleButton = $('<button id="trip-button" onclick="loadtable(`trip`)" data-id="trip" class="opacity-0 btn btn-primary trip">Trips</button>');
     // var $appliedfilters = $('<button id="trip-button" class="tableBtn trip">Trips</button>');
     // $dt.after($appliedfilters);
 
@@ -78,8 +84,16 @@ $(document).ready(function() {
     }
     
     attachCustomPaginationHandlers();
+    $('button[data-id="'+dt+'"]').removeClass('opacity-0');
+}
+var which_table = window.localStorage.getItem('htable') || 'ride';
+_table(which_table);
 
-        // Attach a click event to the 3-dot menu icon in the action column
+$(document).ready(function() {
+    
+    window.localStorage.setItem('htable', 'ride')
+    
+    // Attach a click event to the 3-dot menu icon in the action column
     $('#example tbody').on('click', '.three-dots', function (e) {
       e.stopPropagation(); // Prevent row selection when clicking the menu icon
 
@@ -192,3 +206,8 @@ $('a.demo').click(function(event) {
         $('.data-table').css('z-index', ''); 
     }
 });
+
+function loadtable(tab = 'ride'){
+     window.localStorage.setItem('htable', tab);
+     location.reload();
+}
