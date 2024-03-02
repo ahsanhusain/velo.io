@@ -34,17 +34,17 @@ function _table(dt = 'booked') {
     var $dt = $('div.dataTables_filter');
     $searchInput.attr("placeholder", "Search");
     var $addTitleButton = $('<button id="right-sidebar" onclick="window.open(`./create-trip.html`,`_self`)" class="btn btn-primary ml-2 filter"><i class="fa fa-plus"></i></button>');
-    var $bookTitleButton = $('<button id="ride-button" onclick="loadtable(`booked`)" data-id="booked" class="_tab btn btn-primary ml-2 opacity-0 booked">Booked</i></button>');
+    var $bookTitleButton = $('<button id="ride-button" onclick="loadtable(`booked`)" data-id="booked" class="_tab btn btn-primary ml-2 opacity-0 booked">Approved</i></button>');
+    var $pendingTitleButton = $('<button id="trip-button" onclick="loadtable(`pending`)" data-id="pending" class="_tab btn btn-primary ml-2 opacity-0 pending">Requests</button>');
     var $cancelTitleButton = $('<button id="ride-button" onclick="loadtable(`cancel`)" data-id="cancel" class="_tab btn btn-primary ml-2 opacity-0 cancel">Cancel</i></button>');
-    var $pendingTitleButton = $('<button id="trip-button" onclick="loadtable(`pending`)" data-id="pending" class="_tab btn btn-primary ml-2 opacity-0 pending">Pending</button>');
 
     // var $appliedfilters = $('<button id="trip-button" class="tableBtn trip">Trips</button>');
     // $dt.after($appliedfilters);
 
 
     $searchInput.before($bookTitleButton);
-    $searchInput.before($cancelTitleButton);
     $searchInput.before($pendingTitleButton);
+    $searchInput.before($cancelTitleButton);
     $searchInput.after($addTitleButton);
 
     // Add the search icon to the input field
@@ -94,7 +94,7 @@ _table(which_table);
 $(document).ready(async function() {
     window.localStorage.setItem('table', 'booked')
     // Attach a click event to the 3-dot menu icon in the action column
-    $('#booked tbody').on('click', '.three-dots', function (e) {
+    $('#booked tbody, #pending tbody, #cancel tbody').on('click', '.three-dots', function (e) {
       e.stopPropagation(); // Prevent row selection when clicking the menu icon
 
       // Get the corresponding DataTable row

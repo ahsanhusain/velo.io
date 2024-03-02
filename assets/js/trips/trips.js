@@ -94,7 +94,7 @@ _table(which_table);
 $(document).ready(async function() {
     window.localStorage.setItem('table', 'booked')
     // Attach a click event to the 3-dot menu icon in the action column
-    $('#booked tbody').on('click', '.three-dots', function (e) {
+    $('#booked tbody, #pending tbody, #cancel tbody').on('click', '.three-dots', function (e) {
       e.stopPropagation(); // Prevent row selection when clicking the menu icon
 
       // Get the corresponding DataTable row
