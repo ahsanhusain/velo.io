@@ -94,7 +94,7 @@ $(document).ready(function() {
     window.localStorage.setItem('htable', 'ride')
     
     // Attach a click event to the 3-dot menu icon in the action column
-    $('#example tbody').on('click', '.three-dots', function (e) {
+    $('#ride tbody, #trip tbody').on('click', '.three-dots', function (e) {
       e.stopPropagation(); // Prevent row selection when clicking the menu icon
 
       // Get the corresponding DataTable row

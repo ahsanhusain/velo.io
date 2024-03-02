@@ -29,3 +29,8 @@ function setAciveChat(f) {
   friends.name = f.querySelector('.name').innerText
   chat.name.innerHTML = friends.name
 }
+
+$('.demo').popr({
+  'speed': 200,
+  'mode': 'bottom'
+});

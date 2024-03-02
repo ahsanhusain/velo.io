@@ -42,6 +42,7 @@ body{
   margin-left: auto;
 }
 
+.object-cover { object-fit:cover!important; }
 .border-1 { border: 1px solid lightgrey;!important; }
 
 .h1 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 500; line-height: 1.2; }

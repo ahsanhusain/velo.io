@@ -9,7 +9,7 @@ function _table(dt = 'trip') {
         "pagingType": "full_numbers",
         "pageLength": 10,
         "language": {
-            "lengthMenu": "<h1>Commute</h1>",
+            "lengthMenu": "<h1>Daily Context</h1>",
             "search": "",
             "info": "",
             "paginate": {
@@ -94,7 +94,7 @@ $(document).ready(function() {
 
     window.localStorage.setItem('ctable', 'trip')
     // Attach a click event to the 3-dot menu icon in the action column
-    $('#example tbody').on('click', '.three-dots', function (e) {
+    $('#ride tbody, #trip tbody').on('click', '.three-dots', function (e) {
       e.stopPropagation(); // Prevent row selection when clicking the menu icon
 
       // Get the corresponding DataTable row
