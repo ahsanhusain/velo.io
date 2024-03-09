@@ -122,14 +122,21 @@
                <label class="w-100">Bags</label>
                <div class="align-items-center d-flex">
                   <input type="number" name="max-bags" class="form-control mr-2" placeholder="Max Bags">
-                  <input type="text" name="bag-size" class="form-control" placeholder="Size Medium">
+                  <select name="bag-size" id="bag-size" class="form-control">
+                    <option value="">Size</option>
+                    <option value="xs">Extra Small</option>
+                    <option value="sm">Small</option>
+                    <option value="md">Medium</option>
+                    <option value="lg">Large</option>
+                    <option value="xl">Extra Large</option>
+                  </select>
                 </div>
               </div>
               <div class="align-items-center d-flex w-100">
                <label class="w-100">Booking Preferences</label>
                <div class="align-items-center d-flex">
-                  <button class="btn btn-outline-secondary mr-2">Single</button>
-                  <button class="btn btn-outline-secondary">Multiple</button>
+                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Single</button>
+                  <button data-toggle="button" class="btn btn-outline-secondary">Multiple</button>
                 </div>
               </div>
             </div>
@@ -137,16 +144,16 @@
             <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
               <div class="mr-2 align-items-center d-flex w-100">
                <div class="align-items-center d-flex mb-2">
-                  <button class="btn btn-outline-secondary mr-2">Air Conditioned</button>
-                  <button class="btn btn-outline-secondary mr-2">Has Winter Tires</button>
-                  <button class="btn btn-outline-secondary">Pets Allowed</button>
+                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Air Conditioned</button>
+                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Has Winter Tires</button>
+                  <button data-toggle="button" class="btn btn-outline-secondary">Pets Allowed</button>
                 </div>
               </div>
               <div class="align-items-center d-flex w-100">
                 <label class="w-100">like to socially mix with others?</label>
                 <div class="align-items-center d-flex">
-                  <button class="btn btn-outline-secondary mr-2">Single</button>
-                  <button class="btn btn-outline-secondary">Multiple</button>
+                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Single</button>
+                  <button data-toggle="button" class="btn btn-outline-secondary">Multiple</button>
                 </div>
               </div>
             </div>
@@ -155,8 +162,8 @@
                <div class="mb-2">
                   <label class="w-100">Allergic to perfumes?</label>
                   <div class="align-items-center d-flex mt-2">
-                    <button class="btn btn-outline-secondary mr-2">Single</button>
-                    <button class="btn btn-outline-secondary">Multiple</button>
+                    <button data-toggle="button" class="btn btn-outline-secondary mr-2">Single</button>
+                    <button data-toggle="button" class="btn btn-outline-secondary">Multiple</button>
                   </div>
                 </div>
               </div>
