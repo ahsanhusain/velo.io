@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <nav class="align-items-center align-items-lg-center mt-2 justify-content-between d-lg-flex flex-row-lg justify-content-lg-between navbar w-100">
+      <nav class="pt-2 align-items-center align-items-lg-center mt-2 justify-content-between d-lg-flex flex-row-lg justify-content-lg-between navbar w-100">
         <div class="ml-4">
           <img src="../../assets/img/site/meapheap-logo.png" alt="Velo Logo" />
         </div>
@@ -55,37 +55,39 @@
       </div>
 
       <div class="bg-white form-content m-2 p-5 rounded text-muted">
-        <div class="d-lg-flex justify-content-between mb-2">
-          <div>
-            <h1 class="isEdit mb-2">Add New Vehicle</h1>
-            <span>Upgrade your photo and personal details here</span>
-          </div>
-          <div class="mt-3">
-            <a href="./save-vehicles.html" class="text-decoration-none curser-pointer btn btn-outline-dark text-dark mr-1">Cancel <i class="fa fa-times"></i></a>
-            <button class="curser-pointer btn btn-primary text-white">Submit Request <i class="fa fa-save"></i></button>
-          </div>
-        </div><hr>
-        <div class="search-content pt-4">
-          <div class="action-perform">
-            <div class="upload-file mb-5 curser-pointer">
-              <div id="drop-area" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)" onclick="handleClick()">
-                <img src="../../assets/img/commute/upload.png">
-                <p>Click to upload or drag and drop</p>
-                <input type="file" id="file-input" onchange="handleFileSelect()">
+        <form method="post" action="#" enctype="multipart/form-data">
+          <div class="d-lg-flex justify-content-between mb-2">
+            <div>
+              <h1 class="isEdit mb-2">Add New Vehicle</h1>
+              <span>Upgrade your photo and personal details here</span>
+            </div>
+            <div class="mt-3">
+              <a href="./save-vehicles.html" class="text-decoration-none curser-pointer btn btn-outline-dark text-dark mr-1">Cancel <i class="fa fa-times"></i></a>
+              <button class="curser-pointer btn btn-primary text-white">Submit Request <i class="fa fa-save"></i></button>
+            </div>
+          </div><hr>
+          <div class="search-content pt-4">
+            <div class="action-perform">
+              <div class="upload-file mb-5 curser-pointer">
+                <div id="drop-area" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)" ondrop="handleDrop(event)" onclick="handleClick()">
+                  <img src="../../assets/img/commute/upload.png">
+                  <p>Click to upload or drag and drop</p>
+                  <input type="file" id="file-input" onchange="handleFileSelect()">
+                </div>
+              </div>
+            </div>
+            <div class="d-lg-flex flex-column input-filed w-50 w-xs-100 mt-4">
+              <div class="d-lg-flex mb-2 for_new">
+                <input type="text" name="car-name" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Car Name">
+                <input type="text" name="model" class="form-control pl-0 pr-0 mb-2" placeholder="Model">
+              </div>
+              <div class="d-lg-flex mb-2">
+                <input type="text" name="seats" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Number of seats">
+                <input type="text" name="license-number" class="form-control pl-0 pr-0 mb-2" placeholder="License Number">
               </div>
             </div>
           </div>
-          <div class="d-lg-flex flex-column input-filed w-50 w-xs-100 mt-4">
-            <div class="d-lg-flex mb-2 for_new">
-              <input type="text" name="car-name" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Car Name">
-              <input type="text" name="model" class="form-control pl-0 pr-0 mb-2" placeholder="Model">
-            </div>
-            <div class="d-lg-flex mb-2">
-              <input type="text" name="seats" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Number of seats">
-              <input type="text" name="license-number" class="form-control pl-0 pr-0 mb-2" placeholder="License Number">
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </section>
     <footer class="text-center">

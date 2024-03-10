@@ -573,3 +573,5 @@ body{
 
 .opacity-1{ opacity: 1!important;}
 .opacity-0{ opacity: 0.5!important;}
+
+.active{ color: #1B94CA!important; border-color: #1B94CA!important; }

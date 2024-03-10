@@ -12,3 +12,24 @@ $('.demo').popr({
 //     $('.for_new').css('display', 'block');
 //   }
 // })
+
+$(document).ready(function() {
+    $('.booking-pref').click(function() {
+      $('.booking-pref').removeClass('active'); // Remove 'active' class from all buttons
+      $(this).addClass('active'); // Add 'active' class to the clicked button
+    });
+
+    $('.with').click(function() {
+      $('.with').removeClass('active'); // Remove 'active' class from all buttons
+      $(this).addClass('active'); // Add 'active' class to the clicked button
+    });
+
+    $('.perf').click(function() {
+      $('.perf').removeClass('active'); // Remove 'active' class from all buttons
+      $(this).addClass('active'); // Add 'active' class to the clicked button
+    });
+
+    $(".air-condition, .winter, .pets").click(function(){
+      $(this).toggleClass("active");
+    });
+  });

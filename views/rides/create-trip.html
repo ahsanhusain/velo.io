@@ -20,7 +20,7 @@
   </head>
   <body>
     <header>
-      <nav class="align-items-center align-items-lg-center mt-2 justify-content-between d-lg-flex flex-row-lg justify-content-lg-between navbar w-100">
+      <nav class="pt-2 align-items-center align-items-lg-center mt-2 justify-content-between d-lg-flex flex-row-lg justify-content-lg-between navbar w-100">
         <div class="ml-4">
           <img src="../../assets/img/site/meapheap-logo.png" alt="Velo Logo" />
         </div>
@@ -55,123 +55,129 @@
       </div>
 
       <div class="bg-white form-content m-2 p-5 rounded text-muted">
-        <div class="d-lg-flex justify-content-between mb-2">
-          <div>
-            <h1 class="h1 mb-2">Create Ride</h1>
-            <span>Upgrade your photo and personal details here</span>
-          </div>
-          <div class="mt-3">
-            <a href="./index.html" class="text-decoration-none curser-pointer btn btn-outline-dark text-dark mr-1">Cancel <i class="fa fa-times"></i></a>
-            <button class="curser-pointer btn btn-primary text-white">Save <i class="fa fa-save"></i></button>
-          </div>
-        </div><hr>
-        <div class="search-content pt-4">
-          <div class="action-perform">
-            <div class="d-lg-flex dep-date mb-2">
-              <h2 class="mr-2">Departure Day: </h2> 
-              <input type="date" name="date" class="form-control w-25 w-xs-100">
+        <form method="post" action="" enctype="multipart/form-data">
+          <div class="d-lg-flex justify-content-between mb-2">
+            <div>
+              <h1 class="h1 mb-2">Create Ride</h1>
+              <span>Upgrade your photo and personal details here</span>
             </div>
-          </div>
-          <div class="mt-4">
-            <div class="mt-5 text-muted w-50 w-xs-100 d-lg-flex">
-              <div class="where_to p-2 mr-1 mr-sm-0 fliter_box">
-                <div class="p-xs-3">
-                  <span class="fa fa-location-dot"></span>
-                  <span>Origin</span>
-                  <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
-                  <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100" style="height: 100px">
-                    <a href="https://maps.google.com/" target="_blank" class="w-100 h-100">
-                      <img src="../../assets/img/site/map.avif" alt="map" class="w-100 h-100" style="object-fit: cover;">    
-                    </a>
+            <div class="mt-3">
+              <a href="./index.html" class="text-decoration-none curser-pointer btn btn-outline-dark text-dark mr-1">Cancel <i class="fa fa-times"></i></a>
+              <button class="curser-pointer btn btn-primary text-white" type="submit">Save <i class="fa fa-save"></i></button>
+            </div>
+          </div><hr>
+          <div class="search-content pt-4">
+            <div class="action-perform">
+              <div class="d-lg-flex dep-date mb-2">
+                <h2 class="mr-2">Departure Day: </h2> 
+                <input type="date" name="date" class="form-control w-25 w-xs-100">
+              </div>
+            </div>
+            <div class="mt-4">
+              <div class="mt-5 text-muted w-50 w-xs-100 d-lg-flex">
+                <div class="where_to p-2 mr-1 mr-sm-0 fliter_box">
+                  <div class="p-xs-3">
+                    <span class="fa fa-location-dot"></span>
+                    <span>Origin</span>
+                    <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                    <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100" style="height: 100px">
+                      <a href="https://maps.google.com/" target="_blank" class="w-100 h-100">
+                        <img src="../../assets/img/site/map.avif" alt="map" class="w-100 h-100" style="object-fit: cover;">    
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="where_to p-2 mr-sm-0 fliter_box">
+                  <div class="p-xs-3">
+                    <span class="fa fa-location-dot"></span>
+                    <span>Origin</span>
+                    <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
+                    <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100" style="height: 100px">
+                      <a href="https://maps.google.com/" target="_blank" class="w-100 h-100">
+                        <img src="../../assets/img/site/map.avif" alt="map" class="w-100 h-100" style="object-fit: cover;">    
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="where_to p-2 mr-sm-0 fliter_box">
-                <div class="p-xs-3">
-                  <span class="fa fa-location-dot"></span>
-                  <span>Origin</span>
-                  <p>2972 Westheimer Rd. Santa Ana, Illinois 85486 </p>
-                  <div class="align-items-center bg-white d-flex justify-content-center location mt-2 w-100" style="height: 100px">
-                    <a href="https://maps.google.com/" target="_blank" class="w-100 h-100">
-                      <img src="../../assets/img/site/map.avif" alt="map" class="w-100 h-100" style="object-fit: cover;">    
-                    </a>
+            </div>
+            <div class="d-lg-flex flex-column input-filed w-50 w-xs-100 mt-4">
+              <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
+                <div class="w-100 mr-2">
+                  <input type="text" name="distance" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Estimated Distance (in Kilometers)">
+                </div>
+                <div class="align-items-center d-flex w-100">
+                 <label class="w-100">Estimated Time</label>
+                 <div class="align-items-center d-flex">
+                    <input type="number" name="hour" step="any" class="form-control mr-2" placeholder="HH" value="01">
+                    <input type="number" name="min" step="any" class="form-control" placeholder="MM" value="01">
                   </div>
+                </div>
+              </div>
+              <div class="d-lg-flex mb-4 mb-xs-3 for_new">
+                <input type="number" name="seats" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Seats">
+                <input type="text" name="per-seats-charges" class="form-control pl-0 pr-0 mb-2" placeholder="Charges per Seat">
+              </div>
+              <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
+                <div class="align-items-center d-flex w-100 mr-2 mb-2">
+                 <label class="w-100">Bags</label>
+                 <div class="align-items-center d-flex">
+                    <input type="number" name="max-bags" class="form-control mr-2" placeholder="Max Bags">
+                    <select name="bag-size" id="bag-size" class="form-control">
+                      <option value="">Size</option>
+                      <option value="xs">Extra Small</option>
+                      <option value="sm">Small</option>
+                      <option value="md">Medium</option>
+                      <option value="lg">Large</option>
+                      <option value="xl">Extra Large</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="align-items-center d-flex w-100">
+                 <label class="w-100">Booking Preferences</label>
+                 <div class="align-items-center d-flex">
+                    <input type="button" name="single" class="booking-pref btn btn-outline-secondary mr-2" value="Single">
+                    <input type="button" name="multi" class="booking-pref btn btn-outline-secondary mr-2" value="Multiple">
+                  </div>
+                </div>
+              </div>
+              <div class="d-lg-flex mb-4 mb-xs-3 for_new">
+                <input type="text" name="veh-details" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Vehicle Details">
+                <input type="number" name="instruction" class="form-control pl-0 pr-0 mb-2" placeholder="Total Stops">
+              </div>
+              <h3 class="mb-3">Other Details</h3>
+              <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
+                <div class="mr-2 align-items-center d-flex w-100">
+                  <div class="align-items-center d-flex mb-2">
+                    <input type="button" name="air-condition" class="air-condition btn btn-outline-secondary mr-2" value="Air Conditioned">
+                    <input type="button" name="winter" class="winter btn btn-outline-secondary mr-2" value="Has Winter Tires">
+                    <input type="button" name="pets" class="pets btn btn-outline-secondary mr-2" value="Pets Allowed">
+                  </div>
+                </div>
+                <div class="align-items-center d-flex w-100">
+                  <label class="w-100">like to socially mix with others?</label>
+                  <div class="align-items-center d-flex">
+                    <input type="button" name="with-single" class="with btn btn-outline-secondary mr-2" value="Single">
+                    <input type="button" name="with-multi" class="with btn btn-outline-secondary mr-2" value="Multiple">
+                  </div>
+                </div>
+              </div>
+              <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
+                <div class="mr-2 align-items-center d-flex w-100">
+                 <div class="mb-2">
+                    <label class="w-100">Allergic to perfumes?</label>
+                    <div class="align-items-center d-flex mt-2">
+                      <input type="button" name="yes" class="perf btn btn-outline-secondary mr-2" value="Yes">
+                      <input type="button" name="no" class="perf btn btn-outline-secondary mr-2" value="No">
+                    </div>
+                  </div>
+                </div>
+                <div class="align-items-center d-flex w-100">
                 </div>
               </div>
             </div>
           </div>
-          <div class="d-lg-flex flex-column input-filed w-50 w-xs-100 mt-4">
-            <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
-              <div class="w-100 mr-2">
-                <input type="text" name="distance" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Estimated Distance (in Kilometers)">
-              </div>
-              <div class="align-items-center d-flex w-100">
-               <label class="w-100">Estimated Time</label>
-               <div class="align-items-center d-flex">
-                  <input type="number" name="hour" step="any" class="form-control mr-2" placeholder="HH" value="01">
-                  <input type="number" name="min" step="any" class="form-control" placeholder="MM" value="01">
-                </div>
-              </div>
-            </div>
-            <div class="d-lg-flex mb-4 mb-xs-3 for_new">
-              <input type="text" name="seats" class="form-control pl-0 pr-0 mb-2 mr-2" placeholder="Seats">
-              <input type="text" name="per-seats-charges" class="form-control pl-0 pr-0 mb-2" placeholder="Charges per Seat">
-            </div>
-            <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
-              <div class="align-items-center d-flex w-100 mr-2 mb-2">
-               <label class="w-100">Bags</label>
-               <div class="align-items-center d-flex">
-                  <input type="number" name="max-bags" class="form-control mr-2" placeholder="Max Bags">
-                  <select name="bag-size" id="bag-size" class="form-control">
-                    <option value="">Size</option>
-                    <option value="xs">Extra Small</option>
-                    <option value="sm">Small</option>
-                    <option value="md">Medium</option>
-                    <option value="lg">Large</option>
-                    <option value="xl">Extra Large</option>
-                  </select>
-                </div>
-              </div>
-              <div class="align-items-center d-flex w-100">
-               <label class="w-100">Booking Preferences</label>
-               <div class="align-items-center d-flex">
-                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Single</button>
-                  <button data-toggle="button" class="btn btn-outline-secondary">Multiple</button>
-                </div>
-              </div>
-            </div>
-            <h3 class="mb-3">Other Details</h3>
-            <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
-              <div class="mr-2 align-items-center d-flex w-100">
-               <div class="align-items-center d-flex mb-2">
-                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Air Conditioned</button>
-                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Has Winter Tires</button>
-                  <button data-toggle="button" class="btn btn-outline-secondary">Pets Allowed</button>
-                </div>
-              </div>
-              <div class="align-items-center d-flex w-100">
-                <label class="w-100">like to socially mix with others?</label>
-                <div class="align-items-center d-flex">
-                  <button data-toggle="button" class="btn btn-outline-secondary mr-2">Single</button>
-                  <button data-toggle="button" class="btn btn-outline-secondary">Multiple</button>
-                </div>
-              </div>
-            </div>
-            <div class="d-lg-flex align-items-baseline justify-content-between mb-4 mb-xs-3 w-100">
-              <div class="mr-2 align-items-center d-flex w-100">
-               <div class="mb-2">
-                  <label class="w-100">Allergic to perfumes?</label>
-                  <div class="align-items-center d-flex mt-2">
-                    <button data-toggle="button" class="btn btn-outline-secondary mr-2">Single</button>
-                    <button data-toggle="button" class="btn btn-outline-secondary">Multiple</button>
-                  </div>
-                </div>
-              </div>
-              <div class="align-items-center d-flex w-100">
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </section>
     <footer class="text-center">

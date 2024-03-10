@@ -12,3 +12,8 @@ $(document).ready(function() {
     $('.for_new').css('display', 'block');
   }
 })
+
+$('._day').click(function() {
+  $('._day').removeClass('active'); // Remove 'active' class from all buttons
+  $(this).addClass('active'); // Add 'active' class to the clicked button
+});
