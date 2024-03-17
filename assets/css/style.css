@@ -320,6 +320,7 @@ body{
     .align-xs-self-baseline { align-self: baseline !important; }
     .align-xs-self-stretch { align-self: stretch !important; }
     .flex-xs-row { flex-direction: row !important; }
+    .flex-xs-row-reverse { flex-direction: row-reverse!important; }
     .flex-xs-column { flex-direction: column !important; }
 
     .w-xs-25 { width: 25% !important; }
